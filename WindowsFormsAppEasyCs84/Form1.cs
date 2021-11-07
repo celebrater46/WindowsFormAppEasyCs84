@@ -33,11 +33,11 @@ namespace WindowsFormsAppEasyCs84
             dy = 2;
 
             Timer tm = new Timer();
-            tm.Interval = 100;
+            tm.Interval = 20;
             tm.Start();
 
             this.Paint += new PaintEventHandler(FmPaint);
-            tm.Tick += new EventHandler();
+            tm.Tick += new EventHandler(TmTick);
         }
 
         public void FmPaint(Object sender, PaintEventArgs e)
